@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tayari Swahili App</title>
+  <link rel="stylesheet" href="Tayari Heartbeat Sign Up.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Logo -->
+    <div class="logo-wrapper">
+      <img src="https://files.secure.website/wscfus/10797405/33099498/tayari-logo.png" alt="Brand Logo" class="logo"/>
+    </div>
+
+    <h2 class="heading">Get Your <span style="color: orangered">FREE*</span> Access</h2>
+
+    <!-- Signup Form -->
+    <form id="signup-form" class="form" action="javascript:void(0)">
+
+      <div id="form-groups-container">
+
+        <div class="form-group">
+          <label for="first-name">First Name <span class="required">*</span></label>
+          <input id="first-name" name="first-name" type="text" required placeholder="Enter your first name"/>
+        </div>
+
+        <div class="form-group">
+          <label for="last-name">Last Name <span class="required">*</span></label>
+          <input id="last-name" name="last-name" type="text" required placeholder="Enter your last name"/>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email <span class="required">*</span></label>
+          <input id="email" name="email" type="email" required placeholder="Enter your email"/>
+        </div>
+
+        <div class="form-group">
+          <label for="gender">Gender <span class="required">*</span></label>
+          <select id="gender" name="gender" required>
+            <option value="">Select gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="age-range">Age Range <span class="required">*</span></label>
+          <select id="age-range" name="age-range" required>
+            <option value="">Select age range</option>
+            <option value="Children">Children (Under 12)</option>
+            <option value="12-17">12-17</option>
+            <option value="18-24">18-24</option>
+            <option value="25-34">25-34</option>
+            <option value="35-44">35-44</option>
+            <option value="45-54">45-54</option>
+            <option value="55-64">55-64</option>
+            <option value="65+">65+</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="country">Country <span class="required">*</span></label>
+          <select id="country" name="country" required>
+            <option value="">Select country</option>
+            <!-- options injected by JS -->
+          </select>
+        </div>
+
+      </div>
+
+      <button type="submit" class="submit-button">Continue</button>
+    </form>
+
+    <!-- Success Message -->
+    <div class="success-message" id="success-message">
+      Thank you for signing up! Redirecting...
+    </div>
+
+    <!-- Sign-in Section -->
+    <div class="signin-section">
+      <p>Already have an account?</p>
+      <a href="https://app.tayari.live/login?redirectTo=%2F&login=1" class="signin-button">Sign In</a>
+    </div>
+  </div>
+
+  <!-- Populate full world list for Country -->
+  <script src="Tayari Heartbeat Sign Up.js"></script>
+
+
+</body>
+</html>
