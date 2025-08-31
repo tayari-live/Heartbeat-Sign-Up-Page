@@ -35,6 +35,7 @@
     sel.appendChild(opt);
   });
 
+
   // Optional: preselect by browser locale
   try {
     const localeCountry = (navigator.language || '').split('-')[1];
@@ -44,7 +45,21 @@
     }
   } catch(e) {}
 
-  // 2. Handle form submission
+
+//2. Populate Age dropdown
+const ageSelect = document.getElementById("age");
+for (let i = 1; i <= 100; i++) {
+  const opt = document.createElement("option");
+  opt.value = i;
+  opt.textContent = i;
+  ageSelect.appendChild(opt);
+}
+
+
+
+
+
+  // 3. Handle form submission
   document.getElementById("signup-form").addEventListener("submit", async function(e) {
     e.preventDefault(); // prevent default form submit
 
@@ -53,7 +68,7 @@
       "last-name": document.getElementById("last-name").value,
       "email": document.getElementById("email").value,
       "gender": document.getElementById("gender").value,
-      "age-range": document.getElementById("age-range").value,
+      "age": document.getElementById("age").value,
       "country": document.getElementById("country").value
     };
 
