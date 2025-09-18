@@ -73,7 +73,7 @@ for (let i = 1; i <= 100; i++) {
     };
 
     try {
-      const response = await fetch("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY1MDYzNjA0M2M1MjZkNTUzNDUxMzci_pc", {
+      const response = await fetch("https://api.encharge.io/v1/hooks/be706436-92b4-48b9-907c-5289508f2317", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
@@ -107,3 +107,4 @@ for (let i = 1; i <= 100; i++) {
     }
   });
 })();
+
