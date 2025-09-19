@@ -79,11 +79,11 @@ for (let i = 1; i <= 100; i++) {
         body: JSON.stringify(formData)
       });
 
-      const response2 = await fetch("https://hooks.zapier.com/hooks/catch/2435316/umcv120/", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
-      });
+      // const response2 = await fetch("https://hooks.zapier.com/hooks/catch/2435316/umcv120/", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify(formData)
+      // });
 
       if (response.ok) {
         // Show success modal
@@ -113,5 +113,6 @@ for (let i = 1; i <= 100; i++) {
     }
   });
 })();
+
 
 
