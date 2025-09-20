@@ -74,17 +74,11 @@ for (let i = 1; i <= 100; i++) {
     };
 
     try {
-      const response = await fetch("https://api.encharge.io/v1/hooks/be706436-92b4-48b9-907c-5289508f2317", {
+      const response = await fetch("https://api.encharge.io/v1/hooks/30e9b27c-d08f-4055-8f8f-61c531ba3793", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
       });
-
-      // const response2 = await fetch("https://hooks.zapier.com/hooks/catch/2435316/umcv120/", {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/json" },
-      //   body: JSON.stringify(formData)
-      // });
 
       if (response.ok) {
         // Show success modal
@@ -114,6 +108,7 @@ for (let i = 1; i <= 100; i++) {
     }
   });
 })();
+
 
 
 
