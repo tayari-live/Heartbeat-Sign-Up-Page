@@ -66,7 +66,7 @@ for (let i = 1; i <= 100; i++) {
     const formData = {
       "first-name": document.getElementById("first-name").value,
       "last-name": document.getElementById("last-name").value,
-      "full-name": document.getElementById("first-name").value + " " + document.getElementById("last-name").value
+      "full-name": document.getElementById("first-name").value + " " + document.getElementById("last-name").value,
       "email": document.getElementById("email").value,
       "gender": document.getElementById("gender").value,
       "age": document.getElementById("age").value,
@@ -108,6 +108,7 @@ for (let i = 1; i <= 100; i++) {
     }
   });
 })();
+
 
 
 
