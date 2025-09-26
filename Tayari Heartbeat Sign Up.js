@@ -84,23 +84,22 @@ for (let i = 1; i <= 100; i++) {
       });
 
       if (response.ok) {
-        // Show success modal
-        // const modal = document.createElement('div');
-        // modal.innerHTML = `
-        //   <div class="modal-overlay">
-        //     <div class="modal-content">
-        //       <p>Thank you for signing up!</p>
-        //       <p>Redirecting...</p>
-        //     </div>
-        //   </div>
-        // `;
-        // document.body.appendChild(modal);
-
+         Show success modal
+         const modal = document.createElement('div');
+         modal.innerHTML = `
+           <div class="modal-overlay">
+             <div class="modal-content">
+               <p>Thank you for signing up!</p>
+               <p>Redirecting...</p>
+             </div>
+           </div>
+         `;
+         document.body.appendChild(modal);
         
-        // // Redirect after 4 seconds
-        // setTimeout(() => {
-        //   window.location.href = "https://app.tayari.live/login?redirectTo=%2F&login=1";
-        // }, 2000); // Adjust the timeout (in ms) if needed
+        Redirect after 4 seconds
+        setTimeout(() => {
+          window.location.href = "https://app.tayari.live/login?redirectTo=%2F&login=1";
+        }, 2000); // Adjust the timeout (in ms) if needed
 
         // Show success modal
         signupForm.style.display = 'none'; // Hide the form
