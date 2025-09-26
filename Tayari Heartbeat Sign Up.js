@@ -59,14 +59,11 @@ for (let i = 1; i <= 100; i++) {
 
 
 
-  // Form submission handling 
-    const signupForm = document.getElementById('signup-form');
-    const successMessage = document.getElementById('success-message');
+  // 3. Handle form submission
+  document.getElementById("signup-form").addEventListener("submit", async function(e) {
+    e.preventDefault(); // prevent default form submit
 
-    signupForm.addEventListener('submit', async function(event) {
-        event.preventDefault(); // Prevent default form submission
-
-        const formData = {
+    const formData = {
       "first-name": document.getElementById("first-name").value,
       "last-name": document.getElementById("last-name").value,
       "full-name": document.getElementById("first-name").value + " " + document.getElementById("last-name").value,
@@ -85,14 +82,23 @@ for (let i = 1; i <= 100; i++) {
 
       if (response.ok) {
         // Show success modal
-        signupForm.style.display = 'none'; // Hide the form
-        successMessage.style.display = 'block'; // Show success message
+        const modal = document.createElement('div');
+        modal.innerHTML = `
+          <div class="modal-overlay">
+            <div class="modal-content">
+              <p>Thank you for signing up!</p>
+              <p>Redirecting...</p>
+            </div>
+          </div>
+        `;
+        document.body.appendChild(modal);
 
-        // Simulate redirection after a short delay
+        
+        // Redirect after 4 seconds
         setTimeout(() => {
-            // successMessage.style.display = 'none';
-            window.location.href = "https://app.tayari.live/courses";
-        }, 3000);
+          window.location.href = "https://app.tayari.live/login?redirectTo=%2F&login=1";
+        }, 2000); // Adjust the timeout (in ms) if needed
+
       } else {
         alert("There was an error submitting the form. Please try again.");
       }
@@ -102,8 +108,6 @@ for (let i = 1; i <= 100; i++) {
     }
   });
 })();
-
-
 
 
 
