@@ -84,7 +84,7 @@ for (let i = 1; i <= 100; i++) {
       });
 
       if (response.ok) {
-         Show success modal
+         // Show success modal
          const modal = document.createElement('div');
          modal.innerHTML = `
            <div class="modal-overlay">
@@ -96,20 +96,14 @@ for (let i = 1; i <= 100; i++) {
          `;
          document.body.appendChild(modal);
         
-        Redirect after 4 seconds
+        // Redirect after 4 seconds
         setTimeout(() => {
           window.location.href = "https://app.tayari.live/login?redirectTo=%2F&login=1";
         }, 2000); // Adjust the timeout (in ms) if needed
 
         // Show success modal
-        signupForm.style.display = 'none'; // Hide the form
-        successMessage.style.display = 'block'; // Show success message
-
-        // Simulate redirection after a short delay
-        setTimeout(() => {
-            // successMessage.style.display = 'none';
-            window.location.href = "https://app.tayari.live/courses";
-        }, 3000);
+        // signupForm.style.display = 'none'; // Hide the form
+        // successMessage.style.display = 'block'; // Show success message
 
       } else {
         alert("There was an error submitting the form. Please try again.");
@@ -120,6 +114,7 @@ for (let i = 1; i <= 100; i++) {
     }
   });
 })();
+
 
 
 
