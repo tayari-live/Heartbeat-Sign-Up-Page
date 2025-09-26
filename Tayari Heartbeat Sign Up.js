@@ -60,7 +60,10 @@ for (let i = 1; i <= 100; i++) {
 
 
   // 3. Handle form submission
-  document.getElementById("signup-form").addEventListener("submit", async function(e) {
+  const signupForm = document.getElementById('signup-form');
+  const successMessage = document.getElementById('success-message');
+  
+  signupForm.addEventListener("submit", async function(e) {
     e.preventDefault(); // prevent default form submit
 
     const formData = {
@@ -82,22 +85,32 @@ for (let i = 1; i <= 100; i++) {
 
       if (response.ok) {
         // Show success modal
-        const modal = document.createElement('div');
-        modal.innerHTML = `
-          <div class="modal-overlay">
-            <div class="modal-content">
-              <p>Thank you for signing up!</p>
-              <p>Redirecting...</p>
-            </div>
-          </div>
-        `;
-        document.body.appendChild(modal);
+        // const modal = document.createElement('div');
+        // modal.innerHTML = `
+        //   <div class="modal-overlay">
+        //     <div class="modal-content">
+        //       <p>Thank you for signing up!</p>
+        //       <p>Redirecting...</p>
+        //     </div>
+        //   </div>
+        // `;
+        // document.body.appendChild(modal);
 
         
-        // Redirect after 4 seconds
+        // // Redirect after 4 seconds
+        // setTimeout(() => {
+        //   window.location.href = "https://app.tayari.live/login?redirectTo=%2F&login=1";
+        // }, 2000); // Adjust the timeout (in ms) if needed
+
+        // Show success modal
+        signupForm.style.display = 'none'; // Hide the form
+        successMessage.style.display = 'block'; // Show success message
+
+        // Simulate redirection after a short delay
         setTimeout(() => {
-          window.location.href = "https://app.tayari.live/login?redirectTo=%2F&login=1";
-        }, 2000); // Adjust the timeout (in ms) if needed
+            // successMessage.style.display = 'none';
+            window.location.href = "https://app.tayari.live/courses";
+        }, 3000);
 
       } else {
         alert("There was an error submitting the form. Please try again.");
@@ -108,6 +121,7 @@ for (let i = 1; i <= 100; i++) {
     }
   });
 })();
+
 
 
 
