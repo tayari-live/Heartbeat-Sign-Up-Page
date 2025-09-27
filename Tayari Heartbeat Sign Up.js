@@ -94,8 +94,8 @@
       modal.innerHTML = `
         <div class="modal-overlay" role="dialog" aria-labelledby="modal-title">
           <div class="modal-content">
-            <p id="modal-title">Thank you for signing up!</p>
-            <p>Redirecting...</p>
+            <p id="modal-title">Hooray! Your Swahili adventure is about to begin. </p>
+            <p>Redirecting you to your free lessons now!</p>
           </div>
         </div>
       `;
@@ -116,10 +116,13 @@
           align-items: center;
         }
         .modal-content {
-          background: white;
+          background: #d4edda;
+          color: #155724;
+          border: 1px solid #c3e6cb;
           padding: 20px;
-          border-radius: 5px;
+          border-radius: 8px;
           text-align: center;
+          font-weight: 500;
         }
       `;
       document.head.appendChild(style);
@@ -135,3 +138,4 @@
     }
   });
 })();
+
