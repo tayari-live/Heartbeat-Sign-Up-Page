@@ -1,120 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+ <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tayari Swahili App</title>
+  <title>Start Your Swahili Journey | Tayari</title>
   <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
   <script>
     window.vercelAnalytics = window.vercelAnalytics || [];
     vercelAnalytics.push({
-      projectId: "prj_i2NDm6oweUkz7x3Ijc17MiP5HXTL" // replace with your Vercel project ID
+      projectId: "prj_i2NDm6oweUkz7x3Ijc17MiP5HXTL"
     });
   </script>
 
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YVV3MX64H6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YVV3MX64H6');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YVV3MX64H6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YVV3MX64H6');
+  </script>
   
-  <link rel="stylesheet" href="Tayari Heartbeat Sign Up.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="https://d30itml3t0pwpf.cloudfront.net/api/v3/medias/15749245/image/1600x800%3E/1638644834.png">
+  
 </head>
 <body>
-  <div class="container">
-    <!-- Logo -->
-    <div class="logo-wrapper">
-      <img src="https://files.secure.website/wscfus/10797405/33099498/tayari-logo.png" alt="Brand Logo" class="logo"/>
-    </div>
-
-    <h2 class="heading">Unlock Your <span style="color: orangered">FREE</span> Swahili Adventure!</h2>
-
-    <!-- Signup Form -->
-    <form id="signup-form" class="form" action="javascript:void(0)">
-
-      <div id="form-groups-container">
-
-        <div class="form-group">
-          <label for="first-name">First Name <span class="required">*</span></label>
-          <input id="first-name" name="first-name" type="text" required placeholder="Enter your first name"/>
+  <div class="page-wrapper">
+    <div class="signup-container">
+      <!-- Left Side - Branding -->
+      <div class="branding-side">
+        <div class="logo-section">
+          <img src="https://d30itml3t0pwpf.cloudfront.net/api/v3/medias/15749245/image/1600x800%3E/1638644834.png" alt="Tayari Logo" class="logo"/>
         </div>
 
-        <div class="form-group">
-          <label for="last-name">Last Name <span class="required">*</span></label>
-          <input id="last-name" name="last-name" type="text" required placeholder="Enter your last name"/>
+        <div class="branding-content">
+          <h1>Begin Your Swahili Journey Today</h1>
+          <p>Join thousands of learners mastering Swahili with our proven, interactive learning platform.</p>
+
+          <ul class="features-list">
+            <li>Interactive video lessons with native speakers</li>
+            <li>Personalized learning path for all levels</li>
+            <li>Cultural immersion and real-world practice</li>
+            <li>Track your progress and earn certificates</li>
+          </ul>
         </div>
-
-        <div class="form-group">
-          <label for="email">Email <span class="required">*</span></label>
-          <input id="email" name="email" type="email" required placeholder="Enter your email"/>
-        </div>
-
-        <div class="form-group">
-          <label for="gender">Gender <span class="required">*</span></label>
-          <select id="gender" name="gender" required>
-            <option value="">Select gender</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="age">Age <span class="required">*</span></label>
-          <select id="age" name="age" required>
-            <option value="">Select your age</option>
-              <!-- ages will be injected by JS -->
-          </select>
-        </div>
-
-
-        <div class="form-group">
-          <label for="country">Country <span class="required">*</span></label>
-          <select id="country" name="country" required>
-            <option value="">Select country</option>
-            <!-- options injected by JS -->
-          </select>
-        </div>
-
       </div>
 
-      <button type="submit" class="submit-button">Start Your Free Learning!</button>
-    </form>
+      <!-- Right Side - Form -->
+      <div class="form-side">
+        <div class="form-header">
+          <h2>Create Your Account <span class="free-badge">FREE</span></h2>
+          <p>Start learning Swahili in minutes. No credit card required.</p>
+        </div>
 
-    <!-- Success Message -->
-    <div class="success-message" id="success-message">
-      Hooray! Your Swahili adventure is about to begin. Redirecting you to your free lessons now!
-    </div>
+        <form id="signup-form" class="signup-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First Name <span class="required">*</span></label>
+              <input id="first-name" name="first-name" type="text" required placeholder="John"/>
+            </div>
 
-    <!-- Sign-in Section -->
-    <div class="signin-section">
-      <p>Already have an account?</p>
-      <a href="https://app.tayari.live/courses" class="signin-button">Sign In</a>
+            <div class="form-group">
+              <label for="last-name">Last Name <span class="required">*</span></label>
+              <input id="last-name" name="last-name" type="text" required placeholder="Doe"/>
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="email">Email Address <span class="required">*</span></label>
+            <input id="email" name="email" type="email" required placeholder="john.doe@example.com"/>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="gender">Gender <span class="required">*</span></label>
+              <select id="gender" name="gender" required>
+                <option value="">Select gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+                <option value="Prefer not to say">Prefer not to say</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="age">Age <span class="required">*</span></label>
+              <select id="age" name="age" required>
+                <option value="">Select age</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="country">Country <span class="required">*</span></label>
+            <select id="country" name="country" required>
+              <option value="">Select your country</option>
+            </select>
+          </div>
+
+          <button type="submit" class="submit-button">Start Learning Free →</button>
+        </form>
+
+        <div class="signin-section">
+          <p>Already have an account?</p>
+          <a href="https://app.tayari.live/courses" class="signin-link">Sign in to continue</a>
+        </div>
+      </div>
     </div>
   </div>
-
-  <!-- Populate full world list for Country -->
-  <script src="Tayari Heartbeat Sign Up.js"></script>
-
-  <!-- BEGIN PLERDY CODE -->
-<script type="text/javascript" defer data-plerdy_code='1'>
-    var _protocol="https:"==document.location.protocol?"https://":"http://";
-    _site_hash_code = "51cf6fbc0a8f834098a66ddacdf913ef",_suid=27891, plerdyScript=document.createElement("script");
-    plerdyScript.setAttribute("defer",""),plerdyScript.dataset.plerdymainscript="plerdymainscript",
-    plerdyScript.src="https://d.plerdy.com/public/js/click/main.js?v="+Math.random();
-    var plerdymainscript=document.querySelector("[data-plerdymainscript='plerdymainscript']");
-    plerdymainscript&&plerdymainscript.parentNode.removeChild(plerdymainscript);
-    try{document.head.appendChild(plerdyScript)}catch(t){console.log(t,"unable add script tag")}
-</script>
-<!-- END PLERDY CODE -->
-
-
 </body>
 </html>
+
 
 
 
