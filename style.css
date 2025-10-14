@@ -207,7 +207,7 @@
       content: '✓';
       width: 28px;
       height: 28px;
-      background: var(--brand-blue);
+      background: var(--brand-green);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -270,7 +270,7 @@
 
     .free-badge {
       display: inline-block;
-      background: linear-gradient(135deg, var(--brand-blue), #3a79f8);
+      background: linear-gradient(135deg, var(--brand-purple), #7a1e7a);
       color: white;
       padding: 0.25rem 0.75rem;
       border-radius: 20px;
@@ -531,3 +531,4 @@
     @keyframes spin {
       to { transform: rotate(360deg); }
     }
+
