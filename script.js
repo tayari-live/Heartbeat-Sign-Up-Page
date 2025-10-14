@@ -1,5 +1,4 @@
 (function () {
-      // 1. Populate country dropdown
       const countries = [
         "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan",
         "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi",
@@ -35,7 +34,6 @@
         countrySelect.appendChild(opt);
       });
 
-      // Try to preselect by browser locale
       try {
         const localeCountry = (navigator.language || '').split('-')[1] || '';
         if (localeCountry) {
@@ -46,7 +44,6 @@
         }
       } catch (e) {}
 
-      // 2. Populate Age dropdown
       const ageSelect = document.getElementById("age");
       for (let i = 5; i <= 100; i++) {
         const opt = document.createElement("option");
@@ -55,7 +52,6 @@
         ageSelect.appendChild(opt);
       }
 
-      // 3. Handle form submission
       const signupForm = document.getElementById('signup-form');
 
       signupForm.addEventListener("submit", async function (e) {
@@ -76,7 +72,6 @@
           return;
         }
 
-        // Disable submit button
         const submitBtn = signupForm.querySelector('.submit-button');
         submitBtn.disabled = true;
         submitBtn.textContent = 'Creating your account...';
@@ -92,7 +87,6 @@
             throw new Error(`API error: ${response.statusText}`);
           }
 
-          // Success: Show modal and redirect
           const modal = document.createElement('div');
           modal.className = 'modal-overlay';
           modal.innerHTML = `
@@ -105,7 +99,6 @@
           `;
           document.body.appendChild(modal);
 
-          // Redirect after 2 seconds
           setTimeout(() => {
             window.location.href = "https://app.tayari.live/login?redirectTo=%2F&login=1";
           }, 2000);
@@ -118,4 +111,3 @@
         }
       });
     })();
-
