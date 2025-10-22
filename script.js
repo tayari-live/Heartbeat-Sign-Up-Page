@@ -1,4 +1,5 @@
- const countries = [
+(function () {
+      const countries = [
         "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan",
         "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi",
         "Cabo Verde", "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo (Congo-Brazzaville)", "Congo, Democratic Republic of the", "Costa Rica", "Côte d'Ivoire", "Croatia", "Cuba", "Cyprus", "Czechia",
@@ -83,7 +84,7 @@
           });
 
           if (!response.ok) {
-            throw new Error(`API error: ${response.statusText}`);
+            throw new Error(API error: ${response.statusText});
           }
 
           const modal = document.createElement('div');
@@ -109,7 +110,4 @@
           submitBtn.textContent = 'Start Learning Free →';
         }
       });
-    }
-
-
-
+    })();
