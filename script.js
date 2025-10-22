@@ -110,7 +110,7 @@ const exec = function () {
           submitBtn.textContent = 'Start Learning Free →';
         }
       });
-    })
+    }
 
 exec();
 
