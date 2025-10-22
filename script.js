@@ -77,7 +77,7 @@
         submitBtn.textContent = 'Creating your account...';
 
         try {
-          const response = await fetch("https://api.encharge.io/v1/hooks/30e9b27c-d08f-4055-8f8f-61c531ba3793", {
+          const response = await fetch("https://api.encharge.io/v1/hooks/70c30f3f-cb33-413b-bca6-2eba88a3e269", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData)
@@ -111,5 +111,6 @@
         }
       });
     })();
+
 
 
