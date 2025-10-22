@@ -84,7 +84,7 @@
           });
 
           if (!response.ok) {
-            throw new Error(API error: ${response.statusText});
+            throw new Error(`API error: ${response.statusText}`);
           }
 
           const modal = document.createElement('div');
@@ -111,3 +111,4 @@
         }
       });
     })();
+
